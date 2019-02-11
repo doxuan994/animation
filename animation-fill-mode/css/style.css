@@ -1,0 +1,74 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.glass, .sky, .road {
+    position: relative;
+}
+.sky {
+    height: 40%;
+    background: lightblue;
+}
+.glass {
+    height: 30%;
+    background: seagreen;
+}
+.road {
+    height: 30%;
+    background: dimgrey;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width: 100%;
+}
+.lines {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+
+
+
+/* Animation */
+/* Keyframes */
+@-webkit-keyframes drive {
+    from {
+        -webkit-transform: translateX(200px);
+                transform: translateX(200px);
+    }
+    to {
+        -webkit-transform: translateX(700px);
+                transform: translateX(700px);
+    }
+}
+@keyframes drive {
+    from {
+        -webkit-transform: translateX(200px);
+                transform: translateX(200px);
+    }
+    to {
+        -webkit-transform: translateX(700px);
+                transform: translateX(700px);
+    }
+}
+
+.mario {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    -webkit-animation-name: drive;
+    animation-name: drive;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                    -webkit-animation-delay: 2s;
+                            animation-delay: 2s;
+}
